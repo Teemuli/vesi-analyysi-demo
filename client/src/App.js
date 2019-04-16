@@ -43,7 +43,7 @@ class App extends Component {
   // our first get method that uses our backend api to 
   // fetch data from our data base
   getDataFromDb = () => {
-    fetch("http://localhost:3001/api/getData")
+    fetch(process.env.PORT + "/api/getData")
       .then(data => data.json())
       .then(res => this.setState({ data: res.data }));
   };
@@ -53,7 +53,7 @@ class App extends Component {
 
  
   putDataToDB = () => {
-    axios.post("http://localhost:3001/api/putData", {
+    axios.post(process.env.PORT + "/api/putData", {
       test_id: "test7",
       user_id: "user7",
       exposure_num: 3
