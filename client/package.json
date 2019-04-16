@@ -14,7 +14,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": process.env.PORT,
+  "proxy": "process.env.PORT",
   "eslintConfig": {
     "extends": "react-app"
   },
