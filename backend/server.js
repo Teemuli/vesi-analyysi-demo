@@ -4,6 +4,7 @@ var cors = require('cors');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 const pgp = require('pg-promise')();
+const path = require('path');
 
 const API_PORT = process.env.PORT || 3001;
 const app = express();
