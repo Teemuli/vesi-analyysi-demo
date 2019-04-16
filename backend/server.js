@@ -9,7 +9,7 @@ const API_PORT = process.env.PORT || 3001;
 const app = express();
 app.use(cors());
 //const router = express.Router();
-
+app.use(express.static(path.join(__dirname, '../client/build')));
 
 const dbRoute = 'postgres://bfacpgrwovkgzr:6a8e9b5b8c62098fdd4e537f3246b8b7b402ccb2aa324eaaddf6809e41a66d2b@ec2-79-125-2-142.eu-west-1.compute.amazonaws.com:5432/d88cb0454fotvb?ssl=1';
 const db = pgp(dbRoute);
