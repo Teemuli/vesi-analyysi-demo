@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(logger("dev"));
 
-app.get("api/getData", (req, res) => {
+app.get("/api/getData", (req, res) => {
   db.any('SELECT * FROM test')
         .then(function (data) {
             console.log('DATA:', data)
@@ -38,7 +38,7 @@ app.get("api/getData", (req, res) => {
 
 // this is our create methid
 // this method adds new data in our database
-app.post("api/putData", (req, res) => {
+app.post("/api/putData", (req, res) => {
   const { test_id, user_id, exposure_num } = req.body;
   db.none('INSERT INTO test(test_id, user_id, exposure_num) VALUES($1, $2, $3)'
     ,[test_id, user_id, exposure_num]);
