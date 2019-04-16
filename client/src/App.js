@@ -19,20 +19,24 @@ class App extends Component {
   // then we incorporate a polling logic so that we can easily see if our db has 
   // changed and implement those changes into our UI
   componentDidMount() {
+    /*
     this.getDataFromDb();
     if (!this.state.intervalIsSet) {
       let interval = setInterval(this.getDataFromDb, 100000);
       this.setState({ intervalIsSet: interval });
     }
+    */
   }
 
   // never let a process live forever 
   // always kill a process everytime we are done using it
   componentWillUnmount() {
+    /*
     if (this.state.intervalIsSet) {
       clearInterval(this.state.intervalIsSet);
       this.setState({ intervalIsSet: null });
     }
+    */
   }
 
   // just a note, here, in the front end, we use the id key of our data object 
@@ -43,9 +47,11 @@ class App extends Component {
   // our first get method that uses our backend api to 
   // fetch data from our data base
   getDataFromDb = () => {
+    /*
     fetch("api/getData")
       .then(data => data.json())
       .then(res => this.setState({ data: res.data }));
+      */
   };
 
   // our put method that uses our backend api
@@ -53,11 +59,13 @@ class App extends Component {
 
  
   putDataToDB = () => {
+    /*
     axios.post("api/putData", {
       test_id: "test7",
       user_id: "user7",
       exposure_num: 3
     });
+    */
   };
   
  /*
