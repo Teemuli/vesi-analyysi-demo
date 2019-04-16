@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const logger = require('morgan');
 const pgp = require('pg-promise')();
 
-const API_PORT = process.env.PORT;
+const API_PORT = 3001;
 const app = express();
 app.use(cors());
 const router = express.Router();
