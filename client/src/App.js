@@ -60,7 +60,6 @@ class App extends Component {
               </h3>
             </header>
             <div className="container">
-            <div><UploadComponent /></div>
           </div>
           </div>
         <MapContainer/>
