@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import './App.css';
 import axios from "axios";
 import MapContainer from './components/MapContainer';
-import UploadComponent from './components/UploadComponent';
+//import UploadComponent from './components/UploadComponent';
 
 class App extends Component {
   // initialize our state 
