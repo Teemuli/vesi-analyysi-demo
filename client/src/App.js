@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import './App.css';
 import axios from "axios";
 import MapContainer from './components/MapContainer';
+import GraphComponent from './components/GraphComponent';
 //import UploadComponent from './components/UploadComponent';
 
 class App extends Component {
@@ -62,7 +63,8 @@ class App extends Component {
             <div className="container">
           </div>
           </div>
-        <MapContainer/>
+        <div className="left"><MapContainer /></div>
+        <div className="right"><GraphComponent/></div>
       </div>
       
     );
