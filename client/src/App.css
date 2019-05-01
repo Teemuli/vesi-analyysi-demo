@@ -14,12 +14,12 @@
   margin-bottom: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+  margin: 0px;
 }
 
-.container {
-  padding: 20px;
+.App-link {
+  color: #61dafb;
 }
 
 .grid-container {
@@ -31,8 +31,9 @@
 
 .left {
   float: left;
-  width: 50%;
-  margin-left: 30px;
+  width: 60%;
+  
+  
 }
 
 .right {
@@ -51,7 +52,6 @@
 
 .container {
   text-align: center;
-  padding: 20px;
   margin: 10px auto;
 }
 

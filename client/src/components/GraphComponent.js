@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 
 export class GraphComponent extends Component{
 
@@ -28,11 +28,12 @@ export class GraphComponent extends Component{
         })
         return (
             <div>
-                <LineChart width={600} height={600} data={databyid} position={"right"}>
+                <LineChart width={500} height={600} data={databyid} position={"right"}>
                     <Line type="monotone" dataKey="result_manganese" stroke="#006994" fill="#006994" />
                     <CartesianGrid stroke="#ccc" />
                     <XAxis dataKey="test_id" />
                     <YAxis />
+                    <Tooltip />
                 </LineChart>
             </div>
         );
