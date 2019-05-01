@@ -11,7 +11,7 @@ class App extends Component {
     super(props)
     this.state = {
       data: [],
-      currentTest: 'not selected'
+      currentTest: 'not selected',
     };
   }
 
@@ -19,9 +19,6 @@ class App extends Component {
     this.setState({currentTest: testid})
   }
 
-  // here is our UI
-  // it is easy to understand their functions when you 
-  // see them render into our screen
   render() {
     return (
       <div>
@@ -32,9 +29,10 @@ class App extends Component {
               </h3>
             </header>
             <div><UploadComponent/></div>
-            <div className="left"><MapComponent updateGraphData={this.updateCurrentTest}/></div>
-            <div className="right"><GraphComponent currentId={this.state.currentTest}/></div>
+            <div className="left"><GraphComponent currentId={this.state.currentTest}/></div>
+            <div className="right"><MapComponent updateGraphData={this.updateCurrentTest}/></div>
           </div>
+          
       </div>
     );
   }
