@@ -6,6 +6,7 @@ export class GraphComponent extends Component{
         super(props);
         this.state = {
             data: [],
+            selectedMetal: "result_uranium"
         };
     }
 
@@ -19,6 +20,11 @@ export class GraphComponent extends Component{
           .then(res => this.setState({ data: res.data }));
     };
 
+    updateMetal(metal)
+    {
+        this.setState({selectedMetal: metal});
+    }
+
     render() {
         const { data } = this.state;
         var databyid = [];
@@ -29,8 +35,14 @@ export class GraphComponent extends Component{
         })
         return (
             <div>
+                <button onClick={this.updateMetal.bind(this,"result_uranium")}>U</button>
+                <button onClick={this.updateMetal.bind(this,"result_copper")}>Cu</button>
+                <button onClick={this.updateMetal.bind(this,"result_zinc")}>Zn</button>
+                <button onClick={this.updateMetal.bind(this,"result_lead")}>Pb</button>
+                <button onClick={this.updateMetal.bind(this,"result_nickel")}>Ni</button>
+                <button onClick={this.updateMetal.bind(this,"result_manganese")}>Mn</button>
                 <LineChart width={500} height={600} data={databyid} position={"right"}>
-                    <Line type="monotone" dataKey={"result_uranium"} stroke="#006994" fill="#006994" />
+                    <Line type="monotone" dataKey={this.state.selectedMetal} stroke="#006994" fill="#006994" />
                     <CartesianGrid stroke="#ccc" />
                     <XAxis dataKey="time_stamp" />
                     <YAxis />
