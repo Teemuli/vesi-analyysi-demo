@@ -1,14 +1,20 @@
-import React, { Component } from 'react';
 import '../App.css';
 
+import React from 'react'
+import DropzoneComponent from './DropzoneComponent';
 
-export class UploadComponent extends Component{
+
+// const axios = require("axios");
+
+
+export class UploadComponent extends React.Component {
 
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.fileInput = React.createRef();
     }
+    
     handleSubmit(event) {
         event.preventDefault();
         alert(
@@ -18,26 +24,33 @@ export class UploadComponent extends Component{
         ${this.fileInput.current.files[0].name}
         `
         );
-    }
+
+        // Parse CSV:
+        
+
+
+/*         axios.post(
+                "api/putData", { 
+                test_id: "8022", 
+                user_id: "8023", 
+                exposure_num: 8024,
+                result_manganese: 322,
+                latitude: 62.898000,
+                longitude: 27.622000 }
+            )
+            .then(r => console.log(r.status))
+            .catch(e => console.log(e))
+*/
+        }
 
     render() {
         return (
-            <div className="form">
-            <form onSubmit={this.handleSubmit}>
-                <label>
-                Lataa tiedosto:
-                <br />
-                    <input type="file" ref={this.fileInput} />
-                </label>
-                <br />
 
-                <br />
+            <React.Fragment>
 
-                <button type="submit">Tallenna
-                </button>
-                
-            </form>
-            </div>
+                <DropzoneComponent />
+
+            </React.Fragment>
             
         );
     }

@@ -39,9 +39,9 @@ app.get("/api/getData", (req, res) => {
 // this is our create methid
 // this method adds new data in our database
 app.post("/api/putData", (req, res) => {
-  const { test_id, user_id, exposure_num } = req.body;
-  db.none('INSERT INTO test(test_id, user_id, exposure_num) VALUES($1, $2, $3)'
-    ,[test_id, user_id, exposure_num]);
+  const { test_id, user_id, exposure_num, result_manganese, latitude, longitude } = req.body;
+  db.none('INSERT INTO test(test_id, user_id, exposure_num, result_manganese, latitude, longitude) VALUES($1, $2, $3, $4, $5, $6)'
+    ,[test_id, user_id, exposure_num, result_manganese, latitude, longitude]);
   db.any('SELECT * FROM test')
         .then(function (data) {
             console.log('DATA:', data)

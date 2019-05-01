@@ -4,9 +4,13 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "csv": "^5.1.1",
     "google-maps-react": "^2.0.2",
+    "jquery-csv": "^0.9.1",
     "react": "^16.8.6",
+    "react-csv-reader": "^1.2.2",
     "react-dom": "^16.8.6",
+    "react-dropzone": "^10.1.4",
     "react-scripts": "2.1.8",
     "recharts": "^1.5.0"
   },
