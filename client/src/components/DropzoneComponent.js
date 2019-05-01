@@ -3,7 +3,6 @@ import CSVReader from "react-csv-reader";
 import '../App.css';
 import axios from 'axios';
 
-
 export class DropzoneComponent extends React.Component {
     
     render() {
@@ -35,7 +34,6 @@ export class DropzoneComponent extends React.Component {
           <p>tiedot lautuvat tietokantaan automaattisesti</p>
         </div>
       );
-      
     
     return ( reader );
     }
