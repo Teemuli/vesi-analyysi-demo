@@ -36,7 +36,7 @@ app.get("/api/getData", (req, res) => {
         });
 });
 
-// this is our create methid
+// this is our create method
 // this method adds new data in our database
 app.post("/api/putData", (req, res) => {
   const { test_id, user_id, exposure_num, result_manganese, latitude, longitude } = req.body;
