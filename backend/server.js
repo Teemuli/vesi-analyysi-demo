@@ -39,18 +39,13 @@ app.get("/api/getData", (req, res) => {
 // this is our create method
 // this method adds new data in our database
 app.post("/api/putData", (req, res) => {
-  const { test_id, user_id, exposure_num, result_manganese, latitude, longitude } = req.body;
-  db.none('INSERT INTO test(test_id, user_id, exposure_num, result_manganese, latitude, longitude) VALUES($1, $2, $3, $4, $5, $6)'
-    ,[test_id, user_id, exposure_num, result_manganese, latitude, longitude]);
-  db.any('SELECT * FROM test')
-        .then(function (data) {
-            console.log('DATA:', data)
-            //return res.json({ success: true, data: data});
-        })
-        .catch(function (error) {
-            console.log('ERROR:', error)
-            //return res.json({ success: false, error: err });
-        });
+  const data = req.body;
+  var i;
+  for(i=1;i<data.length-1;i++)
+  {
+    db.none('INSERT INTO test(test_id, user_id, exposure_num, latitude, longitude, result_uranium, result_copper, result_zinc, result_lead, result_nickel, result_manganese, time_stamp) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)'
+   ,[data[i][0], data[i][1], data[i][2], data[i][3], data[i][4], data[i][5], data[i][6], data[i][7], data[i][8], data[i][9], data[i][10], data[i][11], data[i][12]]);
+  }
 });
 
 // append /api for our http requests
