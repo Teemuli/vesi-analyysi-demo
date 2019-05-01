@@ -8,8 +8,8 @@ export class DropzoneComponent extends React.Component {
     render() {
 
     const handleForce = data => {
-        console.log(data)
-        console.log(data[1][1])
+        // console.log(data)
+        // console.log(data[1][1])
                     
         axios.post(
                 "api/putData", { 
