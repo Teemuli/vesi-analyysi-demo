@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import './App.css';
 import MapComponent from './components/MapComponent';
-//import UploadComponent from './components/UploadComponent';
+import UploadComponent from './components/UploadComponent';
 import GraphComponent from './components/GraphComponent';
 
 class App extends Component {
@@ -31,6 +31,7 @@ class App extends Component {
                 UEF sovelletun fysiikan laitoksen vesianalyysi WebApp
               </h3>
             </header>
+            <div><UploadComponent/></div>
             <div className="left"><MapComponent updateGraphData={this.updateCurrentTest}/></div>
             <div className="right"><GraphComponent currentId={this.state.currentTest}/></div>
           </div>

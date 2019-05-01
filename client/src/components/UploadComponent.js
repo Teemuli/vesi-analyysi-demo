@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import '../App.css';
+
 
 export class UploadComponent extends Component{
 
@@ -20,6 +22,7 @@ export class UploadComponent extends Component{
 
     render() {
         return (
+            <div className="form">
             <form onSubmit={this.handleSubmit}>
                 <label>
                 Lataa tiedosto:
@@ -32,7 +35,10 @@ export class UploadComponent extends Component{
 
                 <button type="submit">Tallenna
                 </button>
+                
             </form>
+            </div>
+            
         );
     }
 }
