@@ -10,18 +10,11 @@ export class DropzoneComponent extends React.Component {
     const handleForce = data => {
         // console.log(data)
         // console.log(data[1][1])
-                    
         axios.post(
-                "api/putData", { 
-                test_id: data[1][0], 
-                user_id: data[1][1], 
-                exposure_num: data[1][2],
-                result_manganese: data[1][3],
-                latitude: data[1][4],
-                longitude: data[1][5] }
-            )
-            .then(r => console.log(r.status))
-            .catch(e => console.log(e))
+            "api/putData", data 
+        )
+        .then(r => console.log(r.status))
+        .catch(e => console.log(e))
       };
       
       const reader = (
