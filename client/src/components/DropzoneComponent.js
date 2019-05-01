@@ -32,7 +32,7 @@ export class DropzoneComponent extends React.Component {
             label="Valitse XRF-data CSV file."
             onFileLoaded={handleForce}
           />
-          <p>tiedot lautuvat consoleen</p>
+          <p>tiedot lautuvat tietokantaan automaattisesti</p>
         </div>
       );
       

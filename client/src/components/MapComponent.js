@@ -51,9 +51,9 @@ export class MapComponent extends Component {
       <div>
       <Map
         google={this.props.google}
-        zoom={14}
+        zoom={13}
         style={mapStyles}
-        initialCenter={{ lat: 62.893335, lng: 27.679338 }}
+        initialCenter={{ lat: 62.893335, lng: 27.64338 }}
       >
         {
           data.map(dat => (

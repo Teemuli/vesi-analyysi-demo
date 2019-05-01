@@ -29,7 +29,7 @@ export class GraphComponent extends Component{
         return (
             <div>
                 <LineChart width={600} height={600} data={databyid} position={"right"}>
-                    <Line type="monotone" dataKey="result_manganese" stroke="#8884d8" />
+                    <Line type="monotone" dataKey="result_manganese" stroke="#006994" fill="#006994" />
                     <CartesianGrid stroke="#ccc" />
                     <XAxis dataKey="test_id" />
                     <YAxis />
