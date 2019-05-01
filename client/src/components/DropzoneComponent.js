@@ -23,8 +23,6 @@ export class DropzoneComponent extends React.Component {
             )
             .then(r => console.log(r.status))
             .catch(e => console.log(e))
-
-
       };
       
       const reader = (
@@ -40,7 +38,7 @@ export class DropzoneComponent extends React.Component {
       
     
     return ( reader );
-}
+    }
 }
 
 export default DropzoneComponent;

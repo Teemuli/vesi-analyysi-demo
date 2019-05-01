@@ -20,6 +20,8 @@ export class GraphComponent extends Component{
     render() {
         const { data } = this.state;
         var databyid = [];
+
+        //eslint-disable-next-line
         data.map(dat => {
             if(dat.test_id === this.props.currentId)
             databyid.push(dat);
