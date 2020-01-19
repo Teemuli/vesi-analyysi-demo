@@ -5,4 +5,4 @@ tallentaa mittausdatan tietokantaan. Mittauspaikkojen sijainnit esitetään kart
 metallipitoisuudet kuvaajassa. Kuvaajasta käyttäjä näkee eri metallien pitoisuuksien kehityksen
 aikajanalla.
 
-Lisää kehittämisoppaassa.
+Lisää kehittämisoppaassa(dev-guide.pdf).
